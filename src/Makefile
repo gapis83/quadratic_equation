@@ -32,3 +32,13 @@ gcov_report_build:
 	@lcov -t "./gcov_report" -o gcov_report.info -c -d .
 	@genhtml -o report gcov_report.info
 	open ./report/index.html
+
+style:
+	cp ../materials/linters/.clang-format ./
+	clang-format -n --verbose -style=file *.c *.h
+	rm .clang-format
+
+style_set:
+	cp ../materials/linters/.clang-format ./
+	clang-format -i --verbose -style=file *.c *.h
+	rm .clang-format

@@ -41,9 +41,9 @@ int solution_quadratic_equation(double a, double b, double c,
   if (discriminant > 0) {
     result = allocate_memory(solutions_equation, 2);
     if (result == 2) {
-      double d = sqrt(discriminant) / (2 * a);
-      (*solutions_equation)[0] = ((-1) * b / (2 * a)) + d;
-      (*solutions_equation)[1] = ((-1) * b / (2 * a)) - d;
+      double sqrt_discriminant = sqrt(discriminant);
+      (*solutions_equation)[0] = (-b + sqrt_discriminant) / (2 * a);
+      (*solutions_equation)[1] = (-b - sqrt_discriminant) / (2 * a);
     }
   } else if (is_zero(discriminant) == 0) {
     result = allocate_memory(solutions_equation, 1);

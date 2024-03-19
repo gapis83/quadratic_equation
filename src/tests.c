@@ -6,7 +6,7 @@
 #include "quadratic_equation.h"
 
 START_TEST(test_basic_with_integer_values_1) {
-  double a = 1, b = -6, c = 9;
+  double a = 1.0, b = -6.0, c = 9.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
   double expected_solution = 3.0;
@@ -20,7 +20,7 @@ START_TEST(test_basic_with_integer_values_1) {
 END_TEST
 
 START_TEST(test_basic_with_integer_values_2) {
-  double a = 1, b = -5, c = 6;
+  double a = 1.0, b = -5.0, c = 6.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
   double expected_solution_1 = 3.0;
@@ -36,11 +36,11 @@ START_TEST(test_basic_with_integer_values_2) {
 END_TEST
 
 START_TEST(test_basic_with_integer_values_3) {
-  double a = -1, b = 5, c = -6;
+  double a = -1.0, b = 5.0, c = -6.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
-  double expected_solution_1 = 2;
-  double expected_solution_2 = 3;
+  double expected_solution_1 = 2.0;
+  double expected_solution_2 = 3.0;
 
   ck_assert_int_eq(num_solutions, 2);
   ck_assert_ptr_nonnull(solutions);
@@ -52,10 +52,10 @@ START_TEST(test_basic_with_integer_values_3) {
 END_TEST
 
 START_TEST(test_basic_with_integer_values_4) {
-  double a = 2, b = 3, c = -5;
+  double a = 2.0, b = 3.0, c = -5.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
-  double expected_solution_1 = 1;
+  double expected_solution_1 = 1.0;
   double expected_solution_2 = -2.5;
 
   ck_assert_int_eq(num_solutions, 2);
@@ -68,7 +68,7 @@ START_TEST(test_basic_with_integer_values_4) {
 END_TEST
 
 START_TEST(test_no_solutions_1) {
-  double a = 1, b = 2, c = 3;
+  double a = 1.0, b = 2.0, c = 3.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
 
@@ -78,7 +78,7 @@ START_TEST(test_no_solutions_1) {
 END_TEST
 
 START_TEST(test_linear_equation) {
-  double a = 0, b = 2, c = 3;
+  double a = 0.0, b = 2.0, c = 3.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
 
@@ -92,7 +92,7 @@ START_TEST(test_linear_equation) {
 END_TEST
 
 START_TEST(test_no_solutions_2) {
-  double a = 0, b = 0, c = 3;
+  double a = 0.0, b = 0.0, c = 3.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
 
@@ -102,7 +102,7 @@ START_TEST(test_no_solutions_2) {
 END_TEST
 
 START_TEST(test_infinite_solutions) {
-  double a = 0, b = 0, c = 0;
+  double a = 0.0, b = 0.0, c = 0.0;
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
 
