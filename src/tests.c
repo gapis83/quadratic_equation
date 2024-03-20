@@ -96,7 +96,7 @@ START_TEST(test_no_solutions_2) {
   double *solutions = NULL;
   int num_solutions = solve_equation(a, b, c, &solutions);
 
-  ck_assert_int_eq(num_solutions, -1);
+  ck_assert_int_eq(num_solutions, -3);
   ck_assert_ptr_null(solutions);
 }
 END_TEST

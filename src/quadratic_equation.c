@@ -1,9 +1,5 @@
 #include "quadratic_equation.h"
 
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-
 int solve_equation(double a, double b, double c, double** solutions_equation) {
   int result = 0;
   if (is_zero(a) == 0) {
@@ -11,7 +7,7 @@ int solve_equation(double a, double b, double c, double** solutions_equation) {
       if (is_zero(c) == 0) {
         result = -2;
       } else {
-        result = -1;
+        result = -3;
       }
       *solutions_equation = NULL;
     } else {
